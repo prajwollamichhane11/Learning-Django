@@ -18,6 +18,6 @@ from django.urls import path,include
 
 #every new app paths are added here
 urlpatterns = [
-    path('',include('homenews.urls')),
+    path('',include('travello.urls')),
     path('admin/', admin.site.urls),
 ]
