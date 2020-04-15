@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import TemplateView
+
 
 news1 = "यार्सा टिप्न लेकतिर लर्को विद्यालय बन्द"
 news2 = "के छ अर्थमन्त्रीले पूर्वअर्थमन्त्रीलाई पढाएको जीडीपीको अवस्था"
@@ -11,3 +13,6 @@ news4 = "हिरासतभित्रै युवक झुण्डिए
 # , {'news2':news2}, {'news3':news3}, {'news4':news4}
 def index(request):
     return render(request,'index.html', {'news1':news1})
+
+class AboutPageView(TemplateView):
+	template_name = 'about.html'
